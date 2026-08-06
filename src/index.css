@@ -6,29 +6,37 @@
     font-family: 'Plus Jakarta Sans', sans-serif;
     background-color: #09090b;
     color: #f4f4f5;
+    text-wrap: pretty;
   }
 
-  h1, h2, h3, .font-heading {
+  h1, h2, h3, h4, .font-heading {
     font-family: 'Outfit', sans-serif;
     font-weight: 800;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.03em;
+    text-wrap: balance;
   }
 }
 
-/* Craft Grid & Accent */
-.bg-craft-grid {
-  background-size: 32px 32px;
+/* Subtle Craftsman Noise & Grid Overlay */
+.bg-craft-pattern {
+  background-color: #09090b;
   background-image: 
-    linear-gradient(to right, rgba(217, 119, 6, 0.05) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(217, 119, 6, 0.05) 1px, transparent 1px);
+    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(217, 119, 6, 0.12), transparent),
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 100% 100%, 40px 40px, 40px 40px;
 }
 
+/* Premium Card with Inner Border & Tinted Shadow */
 .craft-card {
-  background: rgba(24, 24, 27, 0.85);
-  border: 1px solid rgba(63, 63, 70, 0.7);
-  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+  background: rgba(24, 24, 27, 0.9);
+  border: 1px solid rgba(63, 63, 70, 0.6);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(255, 255, 255, 0.03) inset;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .craft-card:hover {
-  border-color: rgba(217, 119, 6, 0.5);
+  border-color: rgba(245, 158, 11, 0.5);
+  box-shadow: 0 20px 40px -15px rgba(217, 119, 6, 0.15), 0 0 0 1px rgba(245, 158, 11, 0.2) inset;
+  transform: translateY(-2px);
 }
